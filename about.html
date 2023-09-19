@@ -14,7 +14,10 @@
         <!-- Navbar Section -->
         <nav class="navbar"> <!--nav.navbar + tab-->
             <div class="navbar__container"> <!-- .navbar__container + tab-->
-                <a href="/" id="navbar__logo">CHS Ambassadors</a> <!-- a#navbar__logo + tab-->
+                <a href="/" id="navbar__logo">
+                    <img src="images/imp.png" alt="Logo" class="logo-image">
+                    CHS Ambassadors
+                </a>
                 <div class="navbar__toggle" id="mobile-menu"> <!-- .navbar__toggle#mobile-menu + tab-->
                     <span class="bar"></span> <!-- span.bar + tab -->
                     <span class="bar"></span> <!-- shift + option + down arrow -->
@@ -25,13 +28,16 @@
                         <a href="/" class="navbar__links"> Home </a><!-- a.navbar__links + tab -->
                     </li><!--li.navbar__item + tab-->
                     <li class="navbar__item">
-                        <a href="/tips.html" class="navbar__links"> About </a><!-- a.navbar__links + tab -->
+                        <a href="/about.html" class="navbar__links"> About </a><!-- a.navbar__links + tab -->
                     </li>
                     <li class="navbar__item">
                         <a href="/resources.html" class="navbar__links"> Resources </a><!-- a.navbar__links + tab -->
                     </li>
                     <li class="navbar__item">
                         <a href="/meetings.html" class="navbar__links"> Meetings </a><!-- a.navbar__links + tab -->
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/contact.html" class="navbar__links"> Contact </a><!-- a.navbar__links + tab -->
                     </li>
                 </ul>
             </div>
@@ -55,32 +61,44 @@
         <div class="tours"> <!-- .tours -->
             <h1>How To Give A Great Tour</h1>
             <div class="tours__container">
-                <p>Make sure to utilize your time wisely and engage with the new student.</p>
+                <p>Make sure to utilize your time wisely.</p>
             </div>
             <div class="tours__info">
                 <div class="tours__item"> 
-                    <h2>GRAB A MAP</h2>
-                    <p>Draw out their class route and go over the bell schedule.</p>
+                    <h2 class="toggle-content">GRAB A MAP</h2>
+                    <div class="tours__content">
+                        <p>Draw out their class route and go over the bell schedule.</p>
+                    </div>
                 </div>
                 <div class="tours__item">
-                    <h2>KEEP IT CONCISE</h2>
-                    <p>Utilize time wisely, we want the student to get to class on time.</p>
+                    <h2 class="toggle-content">KEEP IT CONCISE</h2>
+                    <div class="tours__content">
+                        <p>Utilize time wisely, we want the student to get to class on time.</p>
+                    </div>
                 </div>
                 <div class="tours__item">
-                    <h2>GO OVER SCHEDULE</h2> 
-                    <p>Explain the block system, that they will attend the first 4 classes on top row of schedule (1st semester). Mention that homeroom doesn't occur regularly.</p>
+                    <h2 class="toggle-content">GO OVER SCHEDULE</h2> 
+                    <div class="tours__content">
+                        <p>Explain that they will attend the first 4 classes on top row of schedule. Mention that homeroom doesn't occur regularly.</p>
+                    </div>
                 </div>
                 <div class="tours__item">
-                    <h2>TOURING FORMAT</h2>
-                    <p>It is recommended that you follow the order of how their classes are listed.</p>
+                    <h2 class="toggle-content">TOURING FORMAT</h2>
+                    <div class="tours__content">
+                        <p>It is recommended that you follow the order of how their classes are listed.</p>
+                    </div>
                 </div>
                 <div class="tours__item">
-                    <h2>INTRODUCE TO TEACHER</h2>
-                    <p>Make sure to introduce the student to their 1st period teacher before dropping them off.</p>
+                    <h2 class="toggle-content">INTRODUCE TO TEACHER</h2>
+                    <div class="tours__content">
+                        <p>Make sure to introduce the student to their 1st period teacher before dropping them off.</p>
+                    </div>
                 </div>
                 <div class="tours__item">
-                    <h2>RETURN TO STUDENT SERVICES</h2>
-                    <p>Don't linger in hallways after the tour, return to student services where you can be provided a pass to class if you are late.</p>
+                    <h2 class="toggle-content">RETURN TO STUDENT SERVICES</h2>
+                    <div class="tours__content">
+                        <p>Don't linger in hallways after the tour, return to student services where you can be provided a pass to class if you are late.</p>
+                    </div>
                 </div>
               </div>
             <div class="tours__advice">
@@ -97,5 +115,5 @@
                 <div class="circle">Be respectful</div>
             </section>      
         </div>
-        <script src="app.js"></script> 
+        <script src="app.js"></script>  
     </body>

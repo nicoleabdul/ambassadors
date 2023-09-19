@@ -43,10 +43,6 @@
     font-size: 2rem;
 }
 
-.fa-gem {
-    margin-right: 0.5 rem;
-}
-
 .navbar__menu {
     display: flex;
     align-items: center;
@@ -211,7 +207,7 @@
     height: 90vh;
     background-color: #377419;
     z-index: 1;
-    width: 100%;
+    width: 90%;
     max-width: 1300px;
     padding: 0 50px;
 }
@@ -349,73 +345,6 @@
 }
 
 /* Events Section CSS */
-.events {
-    background: #377419;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-}
-
-.events h1 {
-    background-color: #80e80a;
-    background-image: linear-gradient(90deg, #80e80a 0%, #72FBFF 100%);
-    font-size: 2.5rem;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-}
-
-.events__container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.events__card {
-    margin: 1rem;
-    height: 525px;
-    width: 700px;
-    border-radius: 4px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(17, 17, 17, 0.6) 100%), url('/images/caryaudit.jpg');
-    background-size: cover;
-    position: relative;
-    color: #fff;
-}
-
-
-.events h2 {
-    position: absolute;
-    top: 350px;
-    left: 30px;
-}
-
-.events__card p {
-    position: absolute;
-    top: 400px;
-    left: 30px; 
-}
-
-.events__card button {
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    background: #5EB31E;
-    position: absolute;
-    top: 440px;
-    left: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.services__card:hover {
-    transform: scale(1.075);
-    transition: 0.2s ease-in;
-    cursor: pointer;
-}
 
 @media screen and (max-width: 960px) {
     .events {
@@ -443,130 +372,142 @@
 
 /* Tour Section CSS */
 .tours {
-    background: #377419;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
+    background-color: #377419;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
 }
 
 .tours h1 {
-    background-color: #80e80a;
-    background-image: linear-gradient(90deg, #80e80a 0%, #72FBFF 100%);
     font-size: 2.5rem;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    margin-bottom: 1rem;
 }
 
 .tours__container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.tours__container p {
-    display: inline;
-    text-align: left;
-    margin-top: 0;
+.tours p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.tours__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    margin-left: 11rem;
+    margin-right: 11rem;
+}
+
+.tours__item {
+    width: calc(33.33% - 2rem);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 11rem;
+    text-align: center;
+    position: relative;
+}
+
+
+.tours__item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.arrow {
     position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border-width: 5px 0 5px 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.tours__content {
+    margin-top: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid #fff;
     color: #fff;
+    position: absolute;
+    left: 0; 
+    right: 0;
+}
+
+.tours__item.open .tours__content {
+    display: block;
+    position: relative; /* Add this */
+    margin-top: 1rem; /* Adjust as needed */
+}
+
+.tours__advice {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    margin-top: 6rem;
+}
+
+.circles-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
+.circle {
+    background-color: #b9d994;
+    color: #052e0a;
+    padding: 1.5rem 2.5rem;
+    margin: 1rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 @media screen and (max-width: 960px) {
-    .tours {
-        height: 1600px;
-    }
     .tours h1 {
         font-size: 2rem;
-        margin-top: 12rem;
+        margin-top: 2rem;
+    }
+
+    .tours__info {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .tours__item {
+        width: calc(50% - 2rem); /* Two items per row */
+        margin-bottom: 15rem; /* Adjust as needed */
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .toggle-attendance h2 {
+        font-size: 0.5rem;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .tours {
-        height: 900px;
-    }
-
     .tours h1 {
-        font-size: 1.2 rem;
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
     }
 
-    .tours__card {
-        width: 200px;
-    }
-
-    .tours__container p {
-        text-align: center;
+    .tours__item {
+        width: 100%; /* One item per row */
+        margin-left: 0;
+        margin-right: 0;
     }
 }
-
-/* Tour Info Section CSS */
-.tours__info {
-    display: grid;
-    margin-top: 4rem;
-    margin-right: 8rem;
-    margin-left: 8rem;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 columns of equal width */
-    grid-template-rows: repeat(2, 1fr); /* Creates 2 rows of equal height */
-    grid-gap: 10px; /* Adjust the gap between items as per your preference */
-  }
-  
-.tours__item {
-    background-color: #014529; /* Optional: Adds a background color to the items */
-    padding: 15px; /* Optional: Adds some padding to the items */
-    color: #fff;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-.tours__container p {
-    margin-top: 0.3rem;
-}
-
-  
-.tours__item h2 {
-    margin: 0;
-}
-
-
-/* Advice Section CSS */
-.tours__advice p {
-    color: #fff;
-    margin-top: 4rem;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-right: 8rem;
-    margin-left: 8rem;
-}
-
-.circles-section {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    grid-gap: 3px;
-    height: 400px;
-    margin-top: 1rem;
-  }
-  
-.circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #9DB39F;
-    margin: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333333;
-}
- 
 
 /* Resource Section CSS */
 .resource {
@@ -577,6 +518,12 @@
     justify-content: center;
     min-height: 100vh;
     padding: 0 20px;
+}
+
+.textResource {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: white;
 }
   
 .resource__container {
@@ -599,6 +546,10 @@
     background-position: center;
     display: flex;
     flex-direction: column;
+}
+
+.textResource {
+    font-size: 1rem;
 }
 
 .card-1 {
@@ -853,8 +804,12 @@
         font-size: 2rem;
         margin-top: 12rem;
     }
-}
 
+    .resource__card {
+        width: 200px; /* Adjust the width for medium screens */
+        height: 200px; /* Adjust the height for medium screens */
+    }
+}
 
 
 @media screen and (max-width: 480px) {
@@ -867,7 +822,471 @@
     }
 
     .resource__card {
-        width: 200px;
-        height: 200px;
+        width: 100%; /* Full width for small screens */
+        height: auto; /* Allow the height to adjust based on content */
+    }
+}
+
+.logo-image {
+    width: 200px;
+    height: 120px;
+    margin-right: -50px;
+    margin-left: -50px;
+  }
+
+/* Meetings Section CSS */
+.meeting {
+    background-color: #377419;
+    padding: 2rem;
+    text-align: center;
+}
+  
+.meeting h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #87da48;
+}
+  
+.meeting h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #d6f8af;
+}
+  
+.meeting p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+  
+.meeting__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #469b0a;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    margin-bottom: 2rem;
+    
+    position: relative;
+}
+
+.attendance-paragraph {
+    font-size: 18px;
+    display: none;
+    padding: 1rem;
+    text-align: left;
+}
+
+.attendance-paragraph.visible {
+    display: block;
+}
+
+.toggle-attendance {
+    color: white;
+    cursor: pointer;
+    position: relative;
+    padding-right: 20px;
+} 
+
+.toggle-attendance:hover {
+    color: #fff;
+}
+
+.toggle-attendance::after {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border-width: 5px 5px 0; /* Create a triangle shape */
+    border-style: solid;
+    border-color: #d6f8af transparent transparent; /* Set arrow color */
+    pointer-events: none;
+}
+
+/*@media screen and (max-width: 960px) {
+    .meeting {
+        height: 1600px;
+    }
+    .meeting h1 {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    .meeting__card {
+        width: 300px;
+    }
+
+    .toggle-attendance {
+       
+    }
+}*/
+@media screen and (max-width: 480px) {
+    .meeting {
+        height: 1400px;
+        margin: 20px;
+    }
+
+    .meeting h1 {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .meeting__card {
+        width: 100px;
+    }
+
+    .meeting h2 {
+        font-size: 0.5rem;
+    }
+
+    .attendance-paragraph {
+        font-size: 14px;
+        padding: 0.5rem;
+        margin-top: 0; 
+    }
+
+    .toggle-attendance {
+        padding: 12px 20px;
+    }
+
+    .toggle-attendance::after {
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        border-width: 5px 5px 0;
+    }
+
+    .toggle-attendance.open::after {
+        transform: translateY(-50%) rotate(90deg);
+    }
+}
+
+/* Contact Section CSS */
+.contact {
+    background-color: #377419;
+}
+
+.contact__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: #377419;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.contactt {
+    height: 30vh;
+    background-color: #377419;
+}
+
+.contact__content h1 {
+    font-size: 4rem;
+    background-color: #559557;
+    background-image: linear-gradient(to top, #5EB31E 0%, #ACF2F2 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.contact__content h2 {
+    font-size: 4rem;
+    background-color: #559557;
+    background-image: linear-gradient(to top, #5EB31E 0%, #f0f0f0 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.contact__content p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.contact__content .subtext {
+    font-size: 1.2rem;
+    color: beige;
+    font-style: italic;
+}    
+
+.contact__content .bold {
+    color: #fff;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .contact__container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+
+    .contact__content {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .contact__content h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .contact__container h2 {
+        font-size: 3rem;
+    }
+
+    .contact__container p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact__content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    .contact__container h2 {
+        font-size: 2rem;
+    }
+
+    .contact__container p {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* Serve Section CSS */
+.serve {
+    background: #1c380d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+}
+
+.serve h1 {
+    background-color: #80e80a;
+    background-image: linear-gradient(90deg, #80e80a 0%, #72FBFF 100%);
+    font-size: 2.5rem;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-top: 2rem;
+}
+
+.serve__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.serve__card {
+    margin: 1rem;
+    margin-top: 2rem;
+    width: 700px;
+    height: 140px;
+    border-radius: 4px;
+    background-color: rgb(127, 255, 172);
+    background-size: cover;
+    width: 700px;
+    height: 200px;
+    border-radius: 4px;
+    background-color: rgb(127, 255, 172);
+    background-size: cover;
+    color: black; /* Changed text color to black */
+    padding: 20px; /* Added padding to the card */
+    display: flex; /* Added display: flex to align items in the card */
+    flex-direction: column; /* Added flex-direction: column to stack elements vertically */
+    justify-content: space-between; /* Added to evenly distribute elements vertically */
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.serve h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.serve__card p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.servebut {
+    font-size: 1rem;
+    background-color: #27b163;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    /*margin-top: 2rem;*/
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.servebut a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+.servebut a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust the height as needed to control the line thickness */
+    background-color: #fff; /* Change this color to your desired color */
+    transform: scaleX(0); /* Start with no width, so the line is not visible initially */
+    transform-origin: left; /* Line expands from the left to right */
+    transition: transform 0.3s ease-in-out;
+}
+
+.servebut:hover {
+    color: #fff;
+}
+
+.servebut:hover a::after {
+    transform: scaleX(1); /* Expand the line to the full width on hover */
+}
+
+
+.servebut:hover {
+    background-color: rgb(116, 197, 144);
+    cursor: pointer;
+}
+  
+.arrow-icon {
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 40px solid #ffffff;
+    margin: 40px auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.arrow-icon::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #ffffff;
+    transform: translateX(-50%) translateY(-2px);
+}
+
+#firstServeCard {
+    background: linear-gradient(90deg, #377419, #80e80a);
+}
+
+/* Styles specific to the second serve__card */
+#secondServeCard {
+    background: linear-gradient(90deg, #80e80a, #377419);
+}
+
+.service__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px; /* Set a maximum width to avoid stretching on larger screens */
+}
+
+.service__img img {
+    /* Adjust the width and height as per your requirements */
+    width: 100%; /* Modify the width to your desired size */
+    height: auto; /* Adjust the height proportionally */
+    max-width: 600px; /* Set the maximum width for larger screens */
+    height: auto;
+}
+
+@media screen and (max-width: 960px) {
+    .serve {
+        height: 1600px;
+    }
+    .serve h1 {
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    .serve__card {
+        width: 300px;
+    }
+
+    .service__img {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .service__img img{
+        width: 100%; /* Modify the width to your desired size */
+        max-width: 200px; /* Set the maximum width for mobile screens */
+        height: auto; /* Adjust the height proportionally */
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .serve {
+        height: 1400px;
+        margin: 20px;
+    }
+
+    .serve h1 {
+        font-size: 1rem;
+    }
+
+    .serve__card {
+        width: 100px;
+    }
+
+    .serve h2 {
+        font-size: 0.5rem;
+    }
+
+    .service__img {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .service__img img{
+        width: 100%; /* Modify the width to your desired size */
+        max-width: 200px; /* Set the maximum width for mobile screens */
+        height: auto; /* Adjust the height proportionally */
+
     }
 }
